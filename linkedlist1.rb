@@ -30,13 +30,14 @@ class Stack
 
   def pop
     return print "nil\n" if @data.nil?
-    print "#{data.value}\n"
+    print "#{data.value}"
     @data = @data.next_node
   end
 end
 
 def reverse_list(list)
   stack = Stack.new
+
   while list
     stack.push(list.value)
     list = list.next_node
@@ -46,11 +47,11 @@ def reverse_list(list)
 end
 
 
-  node1 = LinkedListNode.new(37)
-  node2 = LinkedListNode.new(99, node1)
-  node3 = LinkedListNode.new(12, node2)
+node1 = LinkedListNode.new(37)
+node2 = LinkedListNode.new(99, node1)
+node3 = LinkedListNode.new(12, node2)
 
-  print_values(node3)
-  puts "-------"
-  revlist = reverse_list(node3)
-  print_values(revlist)
+print_values(node3)
+puts "-------"
+revlist = reverse_list(node3)
+print_values(revlist)
